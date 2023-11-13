@@ -1,0 +1,328 @@
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    padding: 2rem;
+    margin: 0 auto;
+    position: relative;
+
+    .navbar-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+
+        .list-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .50rem;
+
+            @include tablet{
+                display: none;
+                position: fixed;
+                z-index: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 5rem 2rem;
+                color: $MediumGray;
+                background-color: white;
+            }
+            
+            
+
+            
+
+            li{
+                list-style: none;
+                margin-right: 1.5rem;
+                display: flex;
+                align-items: center;    
+                
+                
+                @include tablet{
+                    margin-bottom: 1rem;
+                    font-size: 20px;
+                }
+                
+
+                img{
+                    margin-left: .50rem;
+                }
+                &:hover{
+                    transition: all .20s ease;
+                    cursor: pointer;
+                    opacity: .7;
+                }
+            }
+        }
+        .active{
+            @include tablet{
+                display: flex;
+                width: 70vw;
+                animation: slide .50s ease;
+                
+            }
+            @keyframes slide {
+                from{
+                    width: 0;
+                }
+                to{
+                    width: 70vw;
+                }
+            }
+        }
+
+        
+            @keyframes slideOut {
+                from{
+                    width: 70vw;
+                }
+                to{
+                    width: 0;
+                }
+            }
+    }
+
+
+
+    .btn-container{
+        z-index: 100;
+        .menu-openclose{
+            display: none;
+            @include tablet{
+                display: block;
+                
+                .openMenu{
+                    cursor: pointer;
+                }
+
+                .closeMenu{
+                    display: none;
+                }
+
+            }
+        }
+
+        .login, .register{
+            @include tablet{
+                display: none;
+            }
+
+            padding: .50rem 1.5rem;
+            color: $AlmostBlack;
+            letter-spacing: 1px;
+            border-radius: 10px;
+            color: $MediumGray;
+        }
+        .login{
+            background-color: $AlmostWhite;
+            border: none;
+            margin-right: 1rem;
+            font-weight: 700;
+            &:hover{
+                transition: all .20s ease;
+                cursor: pointer;
+                color: $AlmostBlack;
+            }
+        }
+
+        .register{
+            background-color: $AlmostWhite;
+            border: 1px solid $MediumGray;
+            
+            &:hover{
+                transition: all .20s ease;
+                cursor: pointer;
+                border: 1px solid $AlmostBlack;
+                color: $AlmostBlack;
+            }
+        }
+    }
+
+    
+
+
+    
+}
+
+.navbar-dropDown{
+    display: flex;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.17);
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: .50rem;
+
+
+    @include tablet{
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+.one{
+    display: none;
+    top: 4.5rem;
+    left: 5rem;
+    background-color: white;
+    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.43);
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 150px;
+    padding: .50rem;
+    animation: slideListOne .50s ease-in-out;
+    
+    @include tablet{
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        margin-bottom: 2rem;
+        animation: slideList .50s ease-in-out;
+    }
+    
+
+    li{
+        gap: 2rem;
+        align-self: flex-start;
+    }
+}
+.two{
+    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.43);
+    display: none;
+    width: 150px;
+    height: 120px;
+    top: 4.5rem;
+    left: 17rem;
+    align-items: flex-start;
+    animation: slideListTwo .50s ease-in-out;
+    padding-left: 1rem;
+    
+    
+    @include tablet{
+        padding-left: 2rem;
+        width: 200px;
+        height: 150px;
+        position: static;
+        box-shadow: none;
+        margin: 0;
+        padding-left: 1rem;
+        animation: slideList .50s ease-in-out;
+    }
+}
+.openMenu{
+    z-index: 99;
+}
+.closeMenu{
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+}
+
+.btn-wrapper-list{
+    display: none;
+
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+
+        .login{
+            padding: 1rem;
+            border: none;
+            color: $MediumGray;
+            background-color: transparent;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            &:hover{
+                transition: all .20s ease;
+                cursor: pointer;
+                color: $AlmostBlack;
+            }
+        }
+
+        .register{
+            padding: 1rem;
+            color: $MediumGray;
+            border: 2px solid $MediumGray;
+            background-color: transparent;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            border-radius: 15px;
+
+            &:hover{
+                transition: all .20s ease;
+                cursor: pointer;
+                border: 2px solid $AlmostBlack;
+                color: $AlmostBlack;
+            }
+        }
+    }
+}
+.show{
+    display: flex;
+    @include tablet{
+        display: none;
+    }
+}
+.activeDrop{
+    @include tablet{
+        display: block;
+    }
+}
+
+
+@keyframes slideList {
+    from{
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slideListOne {
+    from{
+        opacity: 0;
+        transform: translateY(-20%);
+        height: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        height: 150px;
+    }
+}
+
+@keyframes slideListTwo {
+    from{
+        opacity: 0;
+        transform: translateY(-20%);
+        height: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        height: 120px;
+    }
+}
+
+
+

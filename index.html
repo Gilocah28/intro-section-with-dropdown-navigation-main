@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+<body>
+
+
+  <main>
+    
+    <div class="nav-container">
+      <div class="navbar-container">
+        <img src="/images/logo.svg" alt="LOGO">
+        <ul class="list-item">
+          <li class="dropDownOne">Features <img src="/images/icon-arrow-down.svg" alt="ArrowUP"></li>
+          <ul class="navbar-dropDown one">
+            <li><img src="/images/icon-todo.svg" alt="Todo"> Todo List</li>
+            <li><img src="/images/icon-calendar.svg" alt="Calendar"> Calendar</li>
+            <li><img src="/images/icon-reminders.svg" alt="Reminders"> Reminders</li>
+            <li><img src="/images/icon-planning.svg" alt="Planning"> Planning</li>
+          </ul>
+
+          <li class="dropDownTwo">
+            Company<img src="/images/icon-arrow-down.svg" alt="ArrowUP">
+          </li>
+          <ul class="navbar-dropDown two">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+          <li>Careers</li>
+          <li>About</li>
+          <div class="btn-wrapper-list">
+            <button class="login">Login</button>
+            <button class="register">Register</button>
+          </div>
+        </ul>
+      </div>
+
+      <div class="btn-container">
+        <div class="btn-wrapper">
+          <button class="login">Login</button>
+          <button class="register">Register</button>
+        </div>
+        <div class="menu-openclose">
+          <img class="openMenu" src="/images/icon-menu.svg" alt="menu-open">
+          <img class="closeMenu" src="/images/icon-close-menu.svg" alt="menu-open">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="main-landing">
+      <div class="info-wrapper">
+        <div class="info-container">
+          <h1>Make <br> remote work</h1>
+          <p class="text">Get your team in sync, no matter your location. Streamline processes, 
+            create team rituals, and watch productivity soar.
+          </p>
+          <p class="btn">Learn more</p>
+
+          <div class="img-brand-container">
+            <img src="/images/client-databiz.svg" alt="databiz">
+            <img src="/images/client-audiophile.svg" alt="audiophile">
+            <img src="/images/client-meet.svg" alt="meet">
+            <img src="/images/client-maker.svg" alt="maker">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="info-img-wrapper">
+        <picture>
+          <source srcset="/images/image-hero-mobile.png" media="(max-width: 800px)">
+          <img src="/images/image-hero-desktop.png" alt="Model">
+        </picture>
+      </div>
+    </div>
+  </main>
+  <script src="scripts/app.js"> </script>
+</body>
+</html>

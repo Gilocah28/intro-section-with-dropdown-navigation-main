@@ -1,0 +1,122 @@
+.main-landing{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 5rem;
+    padding: 0 1rem;
+
+    @include tablet{
+        padding: 0;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    
+    .info-wrapper{
+        flex: 1;
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            text-align: center;
+        }
+
+        .info-container{
+            height: 100%;
+            padding-right: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+
+
+            @include tablet{
+                padding: 0;
+            }
+            h1{
+                font-size: 4rem;
+                letter-spacing: 3px;
+
+                @include tablet{
+                    margin: 0 auto;
+                    font-size: 3rem;
+                    br{
+                        display: none;
+                    }
+                    margin-bottom: 2rem;
+                }
+
+                @include mobile{
+                    font-size: 2rem;
+                }
+            }
+
+            .text{
+                letter-spacing: 1px;
+                line-height: 1.5rem;
+                color: $MediumGray;
+                padding-right: 3rem;
+                @include tablet{
+                    padding: 0;
+                    margin: 0 auto;
+                    margin-bottom: 2rem;
+                }
+                @include mobile{
+                    font-size: 1rem;
+                }
+            }
+
+            .btn{
+                border: 1px solid $AlmostBlack;
+                font-weight: 800;
+                letter-spacing: 2px;
+                padding: 1.3rem 3rem;
+                border-radius: 15px;
+                color: $AlmostWhite;
+                background-color: $AlmostBlack;
+
+
+                &:hover{
+                    transition: all .50s ease;
+                    border: 1px solid $AlmostBlack;
+                    color: $AlmostBlack;
+                    background-color: $AlmostWhite;
+                    cursor: pointer;
+                }
+
+                @include tablet{
+                    margin: 0 auto;
+                    margin-bottom: 3rem;
+                }
+            }
+
+
+
+            .img-brand-container{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem 0;
+                gap: 1rem;
+
+                @include mobile{
+                    flex-direction: column;
+                }
+            }
+        }
+        
+
+    }
+
+
+    .info-img-wrapper{
+        flex: 1;
+
+        img{
+            width: 100%;
+        }
+    }
+
+}
